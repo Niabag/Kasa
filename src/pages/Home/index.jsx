@@ -14,7 +14,8 @@ function Home() {
       <section className='card-container-home'>
         {logementData.map((logement, index) => (  
           <Card
-            key={`${index}`}
+            key={`${logement.title}-${index}`}
+            id={logement.id}
             title={logement.title}
             picture ={logement.cover}
           />

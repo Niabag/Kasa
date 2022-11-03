@@ -1,12 +1,14 @@
+import { Link } from 'react-router-dom'
 import './Card.scss'
 
 
-function Card({picture, title} ) {
+function Card({picture, title, id} ) {
   return (
-      <div className='card-wrapper'>
+      <Link to={id} className='card-wrapper'>
         <img className='card-image' src={picture} alt="Logement" />
         <p className='card-title'>{title}</p>
-      </div>
+      </Link>
+      
   )
 }
 

@@ -1,0 +1,58 @@
+@import '../../utils/styles/colors.scss';
+
+.dropdown {
+  margin-top: 2px;
+}
+
+.dropdown-title{
+    margin-left: 30px;
+    margin-right: 30px;
+    font-weight: 500;
+font-size: 24px;
+font-style: normal;
+line-height: 142.6%;
+}
+
+.dropdown .dropdown-btn {
+  width: 1023px;
+  margin-top: 30px;
+  height: 47px;
+  background: $primary;
+  border-radius: 5px;
+  color: $tertiary;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdown-btn-small{
+    width: 582px;
+    margin-top: 30px;
+    height: 52px;
+    background: $primary;
+    border-radius: 5px;
+    color: $tertiary;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dropdown .dropdown-content {
+  background: white;
+  color: rgb(204, 202, 202);
+  width: 400px;
+}
+
+.dropdown .dropdown-content .dropdown-item {
+  padding: 10px;
+  transition: all 0.2s;
+  font-weight: 400;
+font-size: 24px;
+line-height: 142.6%;
+color: #FF6060;
+width: 1024px;
+}
+
+.dropdown-btn {
+  cursor: pointer;
+}

@@ -20,7 +20,7 @@
     height: 340px;
     border-radius: 10px;
     object-fit: cover;
-    opacity: 0.7;
+    z-index: -1;
 }
 
 .card-title{

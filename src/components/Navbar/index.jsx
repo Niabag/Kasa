@@ -12,7 +12,7 @@ function Navbar() {
         <img className='logo-nav' src={logo} alt="Logo" />
       </Link>
       <div>
-        <Link className='styled-link-nav' to="/">Accueil</Link>
+        <Link className='styled-link-nav' to="/kasa">Accueil</Link>
         <Link className='styled-link-nav' to="/about">A Propos</Link>
       </div>
     </nav>
