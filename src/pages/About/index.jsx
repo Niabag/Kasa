@@ -1,4 +1,4 @@
-import aboutBanner from '../../assets/image/about-Baner.png'
+import aboutBanner from '../../assets/image/aboutBaner.png'
 import '../../utils/styles/GlobalStyle.scss'
 import Dropdown from '../../components/Dropdown'
 import './About.scss'

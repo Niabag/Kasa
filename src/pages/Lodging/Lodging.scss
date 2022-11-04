@@ -1,14 +1,9 @@
 @import '../../utils/styles/colors.scss';
 
-.container-about{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 25px;
-    background: $secondary;
-    height: 223px;
+.container-header{
+    height: 415px;
     width: 1240px;
-    margin-top: 70px;
+    background-color: white;
     @media (max-width: 1080px) {
       height: 255px;
       margin-top: 0px;

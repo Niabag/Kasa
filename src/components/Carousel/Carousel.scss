@@ -1,0 +1,51 @@
+@import '../../utils/styles/colors.scss';
+
+.DisplayFrame::-webkit-scrollbar {
+  display: none;
+}
+
+.DisplayFrame {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  white-space: nowrap;
+  z-index: 1;
+  caret-color: transparent;
+}
+
+.Arrow:hover {
+  cursor: pointer;
+}
+
+.RightArrow ,.RightArrow:hover{
+  z-index: 2;
+  position: absolute;
+  left: 94%;
+  cursor: pointer;
+}
+
+.LeftArrow, .LeftArrow:hover {
+  z-index: 2;
+  padding: 23.36px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.Container {
+  height: 415px;
+  width: 1240px;
+  display: flex;
+  align-items: center;
+}
+
+.CarouselItem {
+  touch-action: none;
+  display: inline-block;
+  transition: all 500ms linear;
+}
+
+.CarouselItem img {
+  height: 415px;
+  width: 1240px;
+  border-radius: 25px;
+  object-fit: cover;
+}

@@ -23,7 +23,7 @@ ReactDOM.render(
           <Route exact path="/404">
             <Error/>
           </Route>
-          <Route exact path="kasa/{:id([0-9a-z]{8})}">
+          <Route exact path="/kasa/:id([0-9a-z]{8})">
               <Lodging/>
           </Route>
           <Route>

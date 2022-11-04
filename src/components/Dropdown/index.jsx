@@ -1,6 +1,6 @@
 import './Dropdown.scss'
-import vectorDown from '../../assets/image/vector-down.png'
-import vectorUp from '../../assets/image/vector-up.png'
+import vectorDown from '../../assets/image/vectorDown.png'
+import vectorUp from '../../assets/image/vectorUp.png'
 import { useState } from 'react'
 
 function Dropdown({dropdownBtnSmall,dropdownBtnWide}) {
