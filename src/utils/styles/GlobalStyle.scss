@@ -13,6 +13,7 @@ body{
     flex-direction: column;
     align-items: center;
     width: auto;
+    position: relative;
     @media (max-width: 1080px) { 
       width: 100%;
      }

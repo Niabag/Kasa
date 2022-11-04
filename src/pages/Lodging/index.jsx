@@ -10,11 +10,12 @@ import logementData from '../../assets/data/logements.json'
 function Lodging() {
   const history = useHistory();
   const { id } = useParams()
-
+  console.log(id)
   useEffect(() => {
+
   function toto() {
     const match = logementData.find(logement => logement.id === id)
-    console.log(match)
+   
     if (!match){  
       return history.push("/404")
     }
