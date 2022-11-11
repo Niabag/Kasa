@@ -1,0 +1,44 @@
+@import '../../utils/styles/colors.scss';
+
+.container-header--about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    background: $secondary;
+    height: 223px;
+    width: 1240px;
+    margin-top: 70px;
+    @media (max-width: 1080px) {
+      height: 255px;
+      margin-top: 0px;
+      width: 90%;
+    }
+}
+
+.banner-about{
+    object-fit: cover;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    font-weight: normal;
+    font-size: 48px;
+    opacity: 0.7;
+    border-radius: 25px;
+    width: 1240px;
+    @media (max-width: 1080px) { 
+       width: 90%;
+       height: 255px;
+     }
+}
+
+
+.container-section{
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (max-width: 1080px) { 
+    width: auto;
+  }
+}

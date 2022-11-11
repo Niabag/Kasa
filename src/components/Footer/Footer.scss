@@ -1,0 +1,24 @@
+@import '../../utils/styles/colors.scss';
+
+.background{
+    height: 209px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $secondary;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.logo{
+margin: 50px;
+  width: 122px;
+  height: 39px;
+  color: $tertiary;
+}
+
+.copyrate{
+    color: $tertiary;
+}
+
