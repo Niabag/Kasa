@@ -3,10 +3,13 @@ import Card from '../../components/Card'
 import logementData from '../../assets/data/logements.json'
 import '../../utils/styles/GlobalStyle.scss'
 import './Home.scss'
+import Navbar from '../../components/Navbar'
 
 function Home() {
   return (
     <div className='align-page'>
+       <Navbar about= 'about-decoration-none'
+              accueil='accueil-decoration-up'/>
       <header className='header-home'>
         <h1 className='title-home'>Chez vous, partout et ailleurs</h1>
         <img className='banner-home' src={banerHome} alt="Baniere" />

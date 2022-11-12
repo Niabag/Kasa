@@ -8,7 +8,6 @@ const widthSpan = 100.1
 function Carousel(props) {
     const [sliderPosition, setSliderPosition] = useState(0);
     const { children } = props;
-
     const prevSlideHandler = () => {
         let newPosition = sliderPosition;
         if (newPosition > 0) {
@@ -38,25 +37,26 @@ function Carousel(props) {
     const translateFullSlides = (newPosition) => {
         let toTranslate = -widthSpan * newPosition;
         for (var i = 0; i < children.length; i++) {
-            let elem = document.getElementById(`carouselitem` + i);
+            let elem = document.getElementById(i);
             elem.style.transform = `translateX(` + toTranslate +`%)`; 
         }
     }
 
+
     const displayItems = Children.map(children, (child, index) =>(
-        <div className="CarouselItem" id={`carouselitem` + index}>{child}</div>
+        <div className="CarouselItem" id={index}>{child}</div>
     ))
+    
 
     return (
-        <div>
             <div className="Container">
                 <img src={vectorLef} alt='' className="LeftArrow" onClick={prevClickHandler}/>
                 <div className='DisplayFrame'>
-                    {displayItems}    
+                    {displayItems}
+                    <p className='slide-count'>{sliderPosition+1}/{children.length}</p>
                 </div>
                 <img src={vectorRight} alt='' className="RightArrow" onClick={nextClickHandler}/>
             </div>
-        </div>
     )
 }
 

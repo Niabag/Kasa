@@ -1,6 +1,6 @@
 @import '../../utils/styles/colors.scss';
 
-.styled-link-nav {
+.about-decoration-none, .about-decoration-up, .accueil-decoration-up,.accueil-decoration-none{
     font-size: 24px;
     font-weight: normal;
     color: $primary;
@@ -10,6 +10,14 @@
       text-transform: uppercase;
       padding-left: 15px;
     }
+}
+
+.about-decoration-none{
+  text-decoration: none;
+}
+
+.accueil-decoration-none{
+  text-decoration: none;
 }
 
 .container-nav{

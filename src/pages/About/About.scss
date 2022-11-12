@@ -1,6 +1,6 @@
 @import '../../utils/styles/colors.scss';
 
-.container-header{
+.container-header--about{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,9 +33,12 @@
 }
 
 
-.container-section{
+.container-section--about{
+  width: 500px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  width: 1200px;
+  @media (max-width: 1080px) { 
+    width: auto;
+  }
 }

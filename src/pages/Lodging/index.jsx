@@ -1,10 +1,12 @@
 import '../../utils/styles/GlobalStyle.scss'
 import './Lodging.scss'
+import fullStar from '../../assets/image/fullStar.png'
 import { useParams, useHistory } from 'react-router-dom'
 import Dropdown from '../../components/Dropdown'
 import { useEffect } from 'react'
 import logementData from '../../assets/data/logements.json'
 import Carousel from '../../components/Carousel/index'
+import Navbar from '../../components/Navbar'
 
 function Lodging() {
   const history = useHistory()
@@ -20,19 +22,71 @@ function Lodging() {
     }
     matchUrlId()
   }, [history, logement])
-  console.log(logement)
 
   return (
     <div className="align-page">
-      <header className="container-header">     
-          <Carousel>
-          {logement.pictures.map((logement, index) => (  
-           <img src={logement} alt="" />
-        ))}
-          </Carousel>
+      <Navbar about="about-decoration-none" accueil="accueil-decoration-none" />
+      <header className="container-header--lodging">
+        <Carousel>
+          {logement.pictures.map((logement, index) => (
+            <img key={index} src={logement} alt="" />
+          ))}
+        </Carousel>
       </header>
-      <section>
-        <Dropdown dropdownBtnSmall="dropdown-btn-small" />
+      <section className="container-section">
+        <div className="container-logement">
+          <div>
+            <h1 className="title">{logement.title}</h1>
+            <p className="location">{logement.location}</p>
+            <div className="container-tags">
+              {logement.tags.map((logement, index) => (
+                <p className="tags" key={index}>
+                  {logement}
+                </p>
+              ))}
+            </div>
+          </div>
+          <div className="container-global-profil">
+            <div className="container-profil">
+              <p className="profil-title">{logement.host.name}</p>
+              <img
+                className="profil-image"
+                src={logement.host.picture}
+                alt="profil"
+              />
+            </div>
+            <div className="container-notation">
+              <img className="star" src={fullStar} alt="etoile" />
+              <img className="star" src={fullStar} alt="etoile" />
+              <img className="star" src={fullStar} alt="etoile" />
+              <img className="star" src={fullStar} alt="etoile" />
+              <img className="star" src={fullStar} alt="etoile" />
+            </div>
+          </div>
+        </div>
+        <div className="container-dropdown">
+          {' '}
+          <Dropdown
+            title="Description"
+            btnLodging="dropdown-btn-lodging"
+            containeurLodging="dropdown-lodging"
+            item="dropdown-item"
+            content="dropdown-content"
+          >
+            <p>{logement.description}</p>
+          </Dropdown>
+          <Dropdown
+            title="Équipements"
+            btnLodging="dropdown-btn-lodging"
+            containeurLodging="dropdown-lodging"
+            item="dropdown-item"
+            content="dropdown-content"
+          >
+            {logement.equipments.map((logement, index) => (
+              <p key={index}>{logement}</p>
+            ))}
+          </Dropdown>
+        </div>
       </section>
     </div>
   )

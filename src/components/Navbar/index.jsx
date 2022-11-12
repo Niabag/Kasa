@@ -4,16 +4,16 @@ import '../../utils/styles/GlobalStyle.scss'
 import './Navbar.scss'
 
 
-function Navbar() {
+function Navbar({accueil, about}) {
   return (
     <div className='align-page'>
     <nav className='container-nav'>
-      <Link to="/">
+      <Link to="/kasa">
         <img className='logo-nav' src={logo} alt="Logo" />
       </Link>
       <div>
-        <Link className='styled-link-nav' to="/kasa">Accueil</Link>
-        <Link className='styled-link-nav' to="/about">A Propos</Link>
+        <Link className={accueil}to="/kasa">Accueil</Link>
+        <Link className={about} to="/about">A Propos</Link>
       </div>
     </nav>
     </div>
