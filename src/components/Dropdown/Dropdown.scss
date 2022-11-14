@@ -3,7 +3,7 @@
 .dropdown-lodging {
   margin-top: 2px;
   width: 582px;
-  height: 350px;
+  
   flex-direction: column;
   justify-content: space-between;
   @media (max-width: 1080px) {
@@ -65,7 +65,6 @@
 .dropdown-btn-lodging {
   width: 582px;
   height: 52px;
-  margin-bottom: 24px;
   background: $primary;
   border-radius: 5px;
   color: $tertiary;
@@ -104,8 +103,10 @@
 
 .dropdown-content {
   background: $dropdown-background;
+  padding-top: 25px;
   color: rgb(204, 202, 202);
   width: 582px;
+  height: 330px;
   border-radius: 10px;
   @media (max-width: 768px) {
     height: auto;
@@ -120,7 +121,7 @@
   border-radius: 10px;
   @media (max-width: 768px) {
     height: auto;
-    width: 335px;
+    width: 249px;
   }
 }
 
@@ -156,23 +157,6 @@
   }
 }
 
-.dropdown-item-about{
-  margin: 25pxpx;
-  padding: 10px;
-  padding-left: 22px;
-  transition: all 0.2s;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 25.67px;
-  color: #ff6060;
-  width: 1000px;
-  height: auto;
-  @media (max-width: 768px) {
-    height: auto;
-    width: 305px;
-  }
-}
 
 .dropdown-btn {
   cursor: pointer;

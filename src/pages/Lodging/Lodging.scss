@@ -88,7 +88,7 @@ text-align: center;
 }
 
 .profil-title {
-  margin: 0px 15px 0px 0px;
+  margin: 5px 20px 0px 0px;
   font-size: 18px;
   font-weight: 500;
   line-height: 26px;
@@ -139,6 +139,7 @@ height: 25px;
 }
 
 .container-notation{
+  margin-top: 20px;
   display: flex;
   justify-content: flex-end;
 }
@@ -162,6 +163,24 @@ margin-top: 24px;
   @media (max-width: 1080px) {
     height: 32px;
     width: 32px;
+  }
+}
+
+.dropdown-item {
+  margin: 0px;
+  padding: 10px;
+  padding-left: 22px;
+  transition: all 0.2s;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25.67px;
+  height: 182px;
+  color: #ff6060;
+  width: auto;
+  height: auto;
+  @media (max-width: 768px) {
+    height: auto;
   }
 }
 
