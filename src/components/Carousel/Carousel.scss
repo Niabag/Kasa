@@ -5,11 +5,11 @@
 }
 
 .DisplayFrame {
-  overflow-y: hidden;
-  overflow-x: hidden;
-  white-space: nowrap;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   z-index: 1;
-  caret-color: transparent;
   @media (max-width: 1080px) {
     height: 255px;
     width: auto;
@@ -51,9 +51,8 @@
 
 .slide-count {
   color: rgba(255, 255, 255, 1);
-  left: 48.95%;
-  right: 49.11%;
-  top: 80%;
+  left: 600px;
+  top: 130px;
   position: absolute;
   font-size: 26px;
   font-weight: 500;
@@ -83,24 +82,39 @@
   }
 }
 
-.CarouselItem {
-  touch-action: none;
-  display: inline-block;
-  transition: all 500ms linear;
-}
 
-.CarouselItem img {
+.styledImage {
+  bottom: -220px;
+  position: absolute;
   height: 415px;
   width: 1243px;
   border-radius: 25px;
   object-fit: cover;
   @media (max-width: 1080px) {
+    bottom: 0px;
     width: 550px;
     height: 255px;
   }
 
   @media (max-width: 768px) {
+    bottom: 0px;
     height: 255px;
     width: 335px;
   }
+}
+
+.slide {
+  transition: all 500ms linear;
+  opacity: 0;
+  transition-duration:  1s ease;
+}
+
+.slide.active{
+  opacity: 1;
+  transition-duration: 1;
+  transform: scale(1.08);
+}
+
+.arrowNone{
+  display: none;
 }

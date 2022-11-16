@@ -19,7 +19,6 @@ function About() {
           content="dropdown-content-about"
         >
           <p className="dropdown-item-about">
-            {' '}
             Les annonces postées sur Kasa garantissent une fiabilité totale. Les
             photos sont conformes aux logements, et toutes les informations sont
             régulièrement vérifiées par nos équipes.

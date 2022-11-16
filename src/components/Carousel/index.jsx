@@ -1,63 +1,61 @@
 import './Carousel.scss'
 import vectorLef from '../../assets/image/vectorLeft.png'
 import vectorRight from '../../assets/image/vectorRight.png'
-import {Children, useState} from 'react'
+import { useState } from 'react'
 
-const widthSpan = 100.1
+function Carousel({ imagesLogement }) {
+  const [sliderPosition, setSliderPosition] = useState(0)
+  const length = imagesLogement.length
+  const images = imagesLogement
+  const prevSlideHandler = () => {
+    let newPosition = sliderPosition
+    setSliderPosition(newPosition === 0 ? length - 1 : newPosition - 1)
+  }
 
-function Carousel(props) {
-    const [sliderPosition, setSliderPosition] = useState(0);
-    const { children } = props;
-    const prevSlideHandler = () => {
-        let newPosition = sliderPosition;
-        if (newPosition > 0) {
-            newPosition = newPosition - 1;
-        }
-        translateFullSlides(newPosition);
-        setSliderPosition(newPosition);
-    }
+  const nextSlideHandler = () => {
+    let newPosition = sliderPosition
+    setSliderPosition(newPosition === length - 1 ? 0 : newPosition + 1)
+  }
 
-    const nextSlideHandler = () => {
-        let newPosition = sliderPosition;
-        if (newPosition < children.length - 1) {
-            newPosition = newPosition + 1;
-        }
-        translateFullSlides(newPosition);
-        setSliderPosition(newPosition);
-    }
+  const prevClickHandler = () => {
+    prevSlideHandler()
+  }
 
-    const prevClickHandler = () => {
-        prevSlideHandler();
-    }
+  const nextClickHandler = () => {
+    nextSlideHandler()
+  }
+ 
 
-    const nextClickHandler = () => {
-        nextSlideHandler();
-    }
+  return (
+    <div className="Container">
+      <img
+        src={vectorLef}
+        alt=""
+        className={length > 1 ? "LeftArrow" : "arrowNone"}
+        onClick={prevClickHandler}
+      />
+      <div className="DisplayFrame">
+        {images.map((images, index) => (
+          <div
+            className={index === sliderPosition ? 'silde active' : 'slide'}
+            key={index}
+          >
+            <img className="styledImage" src={images} alt="logement" />
+          </div>
+        ))}
 
-    const translateFullSlides = (newPosition) => {
-        let toTranslate = -widthSpan * newPosition;
-        for (var i = 0; i < children.length; i++) {
-            let elem = document.getElementById(i);
-            elem.style.transform = `translateX(` + toTranslate +`%)`; 
-        }
-    }
-
-
-    const displayItems = Children.map(children, (child, index) =>(
-        <div className="CarouselItem" id={index}>{child}</div>
-    ))
-    
-
-    return (
-            <div className="Container">
-                <img src={vectorLef} alt='' className="LeftArrow" onClick={prevClickHandler}/>
-                <div className='DisplayFrame'>
-                    {displayItems}
-                    <p className='slide-count'>{sliderPosition+1}/{children.length}</p>
-                </div>
-                <img src={vectorRight} alt='' className="RightArrow" onClick={nextClickHandler}/>
-            </div>
-    )
+        <p className="slide-count">
+          {sliderPosition + 1}/{length}
+        </p>
+      </div>
+      <img
+        src={vectorRight}
+        alt=""
+        className={length > 1 ? "RightArrow" : "arrowNone"}
+        onClick={nextClickHandler}
+      />
+    </div>
+  )
 }
 
-export default Carousel;
+export default Carousel
