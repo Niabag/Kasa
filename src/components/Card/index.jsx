@@ -5,7 +5,7 @@ function Card({picture, title, id} ) {
 
 
   return (
-      <Link to={"logment/" + id}className='card-wrapper'>
+      <Link to={"/logment/" + id}className='card-wrapper'>
         <img className='card-image' src={picture} alt="Logement" />
         <p className='card-title'>{title}</p>
       </Link>
