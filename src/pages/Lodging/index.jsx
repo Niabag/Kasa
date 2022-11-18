@@ -1,8 +1,14 @@
+import { useParams} from 'react-router-dom'
+
+//import scss
 import '../../utils/styles/GlobalStyle.scss'
 import './Lodging.scss'
-import { useParams} from 'react-router-dom'
-import Dropdown from '../../components/Dropdown'
+
+//import data
 import logementData from '../../assets/data/logements.json'
+
+//import composant
+import Dropdown from '../../components/Dropdown'
 import Carousel from '../../components/Carousel/index'
 import Navbar from '../../components/Navbar'
 import Rating from '../../components/Rating'

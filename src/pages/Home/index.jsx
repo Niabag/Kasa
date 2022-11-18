@@ -1,8 +1,15 @@
+//import image
 import banerHome from '../../assets/image/banerHome.png'
-import Card from '../../components/Card'
+
+//import data
 import logementData from '../../assets/data/logements.json'
+
+//import scss
 import '../../utils/styles/GlobalStyle.scss'
 import './Home.scss'
+
+//import composant
+import Card from '../../components/Card'
 import Navbar from '../../components/Navbar'
 
 function Home() {

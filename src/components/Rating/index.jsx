@@ -1,5 +1,8 @@
+//import image
 import fullStar from '../../assets/image/fullStar.png'
 import star from '../../assets/image/star.png'
+
+//import scss
 import './Rating.scss'
 
 

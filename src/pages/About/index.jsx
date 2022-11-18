@@ -1,7 +1,11 @@
 import aboutBanner from '../../assets/image/aboutBaner.png'
-import '../../utils/styles/GlobalStyle.scss'
-import Dropdown from '../../components/Dropdown'
+
+//import scss
 import './About.scss'
+import '../../utils/styles/GlobalStyle.scss'
+
+//import composant
+import Dropdown from '../../components/Dropdown'
 import Navbar from '../../components/Navbar'
 
 function About() {

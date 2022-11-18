@@ -1,6 +1,12 @@
 import { Link } from 'react-router-dom'
+
+//import image
 import logo from '../../assets/image/logo.svg'
+
+//import scss
 import '../../utils/styles/GlobalStyle.scss'
+
+//import composant
 import './Navbar.scss'
 
 

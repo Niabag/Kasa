@@ -1,7 +1,12 @@
+import { useState } from 'react'
+
+//import scss
 import './Dropdown.scss'
+
+//import image
 import vectorDown from '../../assets/image/vectorDown.png'
 import vectorUp from '../../assets/image/vectorUp.png'
-import { useState } from 'react'
+
 
 function Dropdown({title, children, btnAbout, btnLodging, containeurAbout,containeurLodging,content}) {
   const [isActive, setIsActive] = useState(false)

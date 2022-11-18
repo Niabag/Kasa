@@ -1,17 +1,31 @@
-import './Carousel.scss'
-import vectorLef from '../../assets/image/vectorLeft.png'
-import vectorRight from '../../assets/image/vectorRight.png'
 import { useState } from 'react'
 
+//import scss
+import './Carousel.scss'
+
+//import image
+import vectorLef from '../../assets/image/vectorLeft.png'
+import vectorRight from '../../assets/image/vectorRight.png'
+
+
+
 function Carousel({ imagesLogement }) {
+  //useSate initialisé a 0
   const [sliderPosition, setSliderPosition] = useState(0)
+
+  //Total des images
   const length = imagesLogement.length
+
+  //import des images
   const images = imagesLogement
+
+  //Image precedente
   const prevSlideHandler = () => {
     let newPosition = sliderPosition
     setSliderPosition(newPosition === 0 ? length - 1 : newPosition - 1)
   }
 
+  //Image suivante
   const nextSlideHandler = () => {
     let newPosition = sliderPosition
     setSliderPosition(newPosition === length - 1 ? 0 : newPosition + 1)
